@@ -1,0 +1,80 @@
+@import "../constructors/mixins";
+
+.navbar {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  padding: 2em;
+  z-index: 999;
+  position: sticky;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 100%; // set the mobile menu grid columns to be 100%, meaning that each element has it's own row.
+  @include breakpoint(sm) {
+    grid-template-columns: max-content 1fr; //on desktop, split the nav into two grid items. the left, max-contenting to the logo and the right holding the links
+  }
+  @include centre-content;
+}
+
+.links {
+  padding: 0;
+
+  display: flex; //set it to flex.
+  flex-direction: column; // on mobile, display the links as a column
+  text-align: center; // align the text center.
+  align-items: center;
+  margin: 0;
+  list-style-type: none;
+
+  a {
+    text-decoration: none;
+    text-decoration-color: #F5F1E3;
+    transition-duration: 250ms;
+    transition-property: text-decoration;
+    &:hover {
+      text-decoration-color: #F5F1E3 ;
+
+      text-decoration: underline #F5F1E3;
+    }
+  }
+
+
+  li {
+    padding: 0.5rem; //set the list padding to 0.5rem
+  }
+
+  @include breakpoint(xs) {
+    visibility: hidden; //hide the menu initially
+    height: 0; //set the height to zero
+    overflow: hidden;
+  }
+
+  @include breakpoint(sm) {
+    flex-direction: row; //on desktop, set the links to row.
+    justify-content: flex-end; //align them to the far right of the nav.
+  }
+}
+
+.linksVisisble {
+  visibility: visible;
+  height: auto;
+  padding-top: 1rem; // in mobile view, add padding to the top of the links of 1rem. this makes the padding symmetical.
+}
+
+.content {
+  display: flex;
+  justify-content: space-between; // add white space between logo and menu
+  align-items: center; // center the items veritcally.
+}
+
+.menuIcon {
+  font-size: 30px;
+
+  @include breakpoint(sm) {
+    display: none; //hide on desktop
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
