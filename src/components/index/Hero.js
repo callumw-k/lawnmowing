@@ -44,7 +44,7 @@ export default function Hero() {
     <HeroWrapper>
       <HeroInner>
         <TitleWrapper>
-          <Title>The #1 Rubbish Removalist in Ballarat</Title>
+          <Title>#1 Lawn Care Specialist in </Title>
           <GlobalComponents.ButtonLink to="/contact">
             This is a link
           </GlobalComponents.ButtonLink>

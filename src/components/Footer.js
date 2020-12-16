@@ -12,7 +12,7 @@ const FooterInner = styled.div`
   grid-template-columns: repeat(3, 33%);
   
   @media (max-width: ${breakpoints.sm}) {
-  grid-template-columns:
+  grid-template-columns: 100%
   }
   
 `
@@ -24,18 +24,16 @@ const FooterCol = styled.div`
 `
 
 const FooterCol1 = styled(FooterCol)`
-  border: 1px solid #ff0000;
+
   h3 {
   font-weight: bold;
   }
 `;
 
 const FooterCol2 = styled(FooterCol)`
-  border: 1px solid red;
 `;
 
 const FooterCol3 = styled(FooterCol)`
-  border: 1px solid red;
 `;
 
 
