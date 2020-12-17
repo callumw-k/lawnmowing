@@ -5,6 +5,7 @@ const Typography = createGlobalStyle`
   html {
     font-family: 'Montserrat';
     color: var(--black);
+    font-size: 16px;
   }
   p, li {
     letter-spacing: 0.5px;
@@ -38,6 +39,10 @@ const Typography = createGlobalStyle`
   
   h1 {
     margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
   }
   
 `
