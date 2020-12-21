@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Rubbish from "../../images/rubbish-truck.png"
+import Rubbish from "../../images/grass-background.jpg"
 import GlobalComponents from "../globals/GlobalsComponents"
 
 const HeroWrapper = styled.div`
@@ -15,28 +15,30 @@ const HeroWrapper = styled.div`
 
 const HeroInner = styled(GlobalComponents.CentreContent)`
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 `
 
-const TitleWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+const TitleWrapper = styled.div``
 
-  background-color: white;
+const TitleWrapperInner = styled.div`
+
   padding: 2.5rem;
   border-radius: 10px;
+
+  border: 2px solid white;
 `
 
 const Title = styled.h1`
   text-align: center;
   font-size: 3rem;
-  color: black;
+  color: white;
+  margin-bottom: 0;
+  font-weight: bold;
+
+  z-index: 999;
 `
 
 export default function Hero() {
@@ -44,10 +46,9 @@ export default function Hero() {
     <HeroWrapper>
       <HeroInner>
         <TitleWrapper>
-          <Title>#1 Lawn Care Specialist in </Title>
-          <GlobalComponents.ButtonLink to="/contact">
-            This is a link
-          </GlobalComponents.ButtonLink>
+          <TitleWrapperInner>
+            <Title>Montrose Gardening</Title>
+          </TitleWrapperInner>
         </TitleWrapper>
       </HeroInner>
     </HeroWrapper>

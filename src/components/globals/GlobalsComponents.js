@@ -11,7 +11,7 @@ const ButtonLink = styled(Link)`
 
   transition-duration: 250ms;
   transition-property: box-shadow;
-  padding: 1em 2em;
+  padding: 0.75rem 1rem;
   border-radius: 10px;
 
   &:hover {
